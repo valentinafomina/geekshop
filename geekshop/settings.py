@@ -16,7 +16,7 @@ from dotenv import load_dotenv
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
-load_dotenv(BASE_DIR / '.env')
+load_dotenv(BASE_DIR, '/.env')
 
 
 # Quick-start development settings - unsuitable for production
@@ -69,6 +69,7 @@ TEMPLATES = [
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
+                'mainapp.context_processors.basket'
             ],
         },
     },
@@ -138,4 +139,15 @@ AUTH_USER_MODEL = 'authapp.ShopUser'
 
 LOGIN_URL = '/auth/login/'
 
-EMAIL_HOST = os.getenv('EMAIL_HOST')
+# EMAIL_HOST = os.getenv('EMAIL_HOST')
+
+EMAIL_HOST = 'localhost'
+EMAIL_PORT = 25
+EMAIL_HOST_USER = 'django@gb.local'
+EMAIL_HOST_PASSWORD = 'geekbrains'
+EMAIL_USE_SSL = False
+
+EMAIL_BACKEND = 'django.core.mail.backends.filebased.EmailBackend'
+EMAIL_FILE_PATH = 'tmp/emails'
+
+DOMAIN_NAME = 'http://localhost:8088'
