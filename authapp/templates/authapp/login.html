@@ -17,5 +17,10 @@
             зарегистрироваться
         </a>
     </button>
+    <button class="btn btn-round form-control">
+        <a href="{% url 'social:begin' 'vk-oauth2' %}?next=/">
+         войти через ВК
+        </a>
+    </button>
 
 {% endblock %}
