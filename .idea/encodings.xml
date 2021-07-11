@@ -4,5 +4,6 @@
     <file url="file://$PROJECT_DIR$/ordersapp/forms.py" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/ordersapp/models.py" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/ordersapp/views.py" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/static/js/orders_scripts.js" charset="UTF-8" />
   </component>
 </project>

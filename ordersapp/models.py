@@ -24,8 +24,7 @@ class Order(models.Model):
         (CANCEL, 'отменен'),
         (DELIVERED, 'доставлен'),
     )
-    user = models.ForeignKey(settings.AUTH_USER_MODEL,
-                             on_delete=models.CASCADE)
+    user = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE)
     created = models.DateTimeField(verbose_name='создан', auto_now_add=True)
     updated = models.DateTimeField(verbose_name='обновлен', auto_now=True)
     status = models.CharField(verbose_name='статус',
@@ -77,7 +76,7 @@ class OrderItemQuerySet(models.QuerySet):
 class OrderItem(models.Model):
     objects = OrderItemQuerySet.as_manager()
 
-    order = models.ForeignKey(Order, related_name="orderitems", on_delete=models.CASCADE)
+    order = models.ForeignKey(Order, related_name="orderitems", on_delete=models.CASCADE, null=True)
     product = models.ForeignKey(Product, verbose_name='продукт', on_delete=models.CASCADE)
     quantity = models.PositiveIntegerField(verbose_name='количество', default=0)
 
