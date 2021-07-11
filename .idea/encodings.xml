@@ -1,15 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="Encoding">
+    <file url="file://$PROJECT_DIR$/.gitignore" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/authapp/apps.py" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/authapp/pipeline.py" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/authapp/tests.py" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/authapp/urls.py" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/basketapp/urls.py" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/db.sqlite3" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/fill_db.bat" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/mainapp/json/categories.json" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/mainapp/json/contact__locations.json" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/mainapp/json/products.json" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/mainapp/management/commands/users_fix.py" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/manage.py" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/migrate.bat" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/ordersapp/__init__.py" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/ordersapp/admin.py" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/ordersapp/apps.py" charset="UTF-8" />
@@ -18,6 +23,8 @@
     <file url="file://$PROJECT_DIR$/ordersapp/tests.py" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/ordersapp/urls.py" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/ordersapp/views.py" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/requirements.in" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/requirements.txt" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/static/css/bootstrap-theme.min.css" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/static/css/bootstrap-theme.min.css.map" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/static/css/bootstrap.css.map" charset="UTF-8" />
@@ -25,6 +32,11 @@
     <file url="file://$PROJECT_DIR$/static/css/bootstrap.min.css.map" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/static/fonts/font-awesome/css/font-awesome.css" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/static/fonts/font-awesome/css/font-awesome.min.css" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/static/js/bootstrap.min.js" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/static/js/jquery-3.2.1.min.js" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/static/js/jquery.formset.js" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/static/js/orders_scripts.js" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/tmp/emails/20210619-195513-2984495029104.log" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/tmp/emails/20210619-195803-2984497083896.log" charset="UTF-8" />
   </component>
 </project>
