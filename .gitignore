@@ -3,3 +3,13 @@
 /django_2.2/
 /django_3/
 /env/
+.idea
+*.pyc
+__pycache__
+#db.sqlite3
+#media
+.DB_store
+venv
+.env
+*.log
+.vscode/

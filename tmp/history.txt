@@ -1,0 +1,185 @@
+    1  mkdir .ssh
+    2  chmod 700 .ssh
+    3  cd .ssh
+    4  echo AAAAB3NzaC1yc2EAAAADAQABAAABAQCYPH4R82CQOdC68imD+Bbt08YVP6ZfmSJS
+    5  8WrgIVCx1cb8tFAA0y6Pv4ri3IjBIiMR4xii5t9LT4TvOALlW3kZ9Qaff9LbUwrk
+    6  0RcOUErhCcwpeTnQNoaVjVDA7Ms09a94lc7DmTPAAkFxdsZ4rultas+x9ll2cdR/
+    7  I7Rf1Vz6b8MWjgw9I+nIrsOJE/ZBrLemU4EcFgXLBQoKbfifAY4bfhqHVOv8++4z
+    8  cxwA//ebNGe+EllBB0V6ordmUdNrix5sQMjlnBy53eDygE72ncO3m5+cE+nfXNsv
+    9  echo AAAAB3NzaC1yc2EAAAADAQABAAABAQCYPH4R82CQOdC68imD+Bbt08YVP6ZfmSJS8WrgIVCx1cb8tFAA0y6Pv4ri3IjBIiMR4xii5t9LT4TvOALlW3kZ9Qaff9LbUwrk0RcOUErhCcwpeTnQNoaVjVDA7Ms09a94lc7DmTPAAkFxdsZ4rultas+x9ll2cdR/I7Rf1Vz6b8MWjgw9I+nIrsOJE/ZBrLemU4EcFgXLBQoKbfifAY4bfhqHVOv8++4zcxwA//ebNGe+EllBB0V6ordmUdNrix5sQMjlnBy53eDygE72ncO3m5+cE+nfXNsvYRUroBJCAwEICGd7Rm9MEXbf3Q5HQ+sLLKibJY43wYV3oxCnvKFl >> authorized key
+   10  cd .ssh
+   11  echo ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQCnluOROLvEIJe8rHP06zMEH6syBkxbLmQHf3Ter+lSJ6wI/B//dnqZcZox2wH4KE+OjVwR6E5Dv6oxEvP4qMVSeDqCLZu/Yu/zAqNUozXzEytS08lLbt8a7CCnn332sf1BDljuKTej9SE+/VAtTt0x4BgtqGnqVwrre0IjM4esTrr6c0AhtXogLczaN4Qd57Iq2ikLPF50NMo3zxYBf9pWOtl0YO3ttk/DVxFfE35IeuR/uP9xPWLQcKDuRo+p3vlIDcUsBzyT7y+7RV+jEBNJ/U4aidZLTDfbmlc/A9je/FwYT4wLN0mqBn+Jv2zkaQDAg3uydXrFIYDXwwtb+6y5 rsa-key-20210711 >> authorized_keys
+   12  quit
+   13  exit
+   14  cd .ssh
+   15  echo ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQCQaXc97+EIg70MhCUbs59AdoYk9qsHtZQdBfW6kXMYMEIyiES8tXPYNvPUUsXg4WshjArRBCnl1v35/dYP2on7tG2McXoGWWtCdSVGWDKMrXQ94kGjmNugVpnkkGPUMKMSeWsREtRQBp0mI3E8i0KEDQh1NsPBEGl/dl9BL1LUkP1HBf5cpvSgVNiftADcThKNuTSlm3RkgxJnjd8r9Na0Ms1bOw9L4bgHKoz1y3+I3d9Wx/YwjRp4TGM8Vbunx4g/Q/BL+472ETlNvDu5j06fciaI82tju0E2khQVp3mQC2ZINe0W2JJx4XONHBDSryRnRN2toSKCiqOMyfiQ6v8X rsa-key-20210711 >> authorized_keys
+   16  exit
+   17  apt update
+   18  apt install nginx
+   19  apt install postgresql
+   20  apt install postgresql -contrib
+   21  apt install postgresql-contrib
+   22  apt install python3-venv
+   23  apt install git
+   24  apt install mc
+   25  mcedit /etc/postgresql/12/main/pg_hba.conf
+   26  systemctl restart postgresql
+   27  systemctl status  postgresql
+   28  cd geekshop
+   29  source env/bin/activate
+   30  mcedit /etc/systemd/system/gunicorn.service
+   31  systemctl enable gunicorn
+   32  systemctl start gunicorn
+   33  systemctl status gunicorn
+   34  useradd -g www-data -m django
+   35  cd /home/django#
+   36  cd /home/django
+   37  git clone git@github.com:valentinafomina/geekshop.git
+   38  git clone 
+   39  git clone git@github.com:valentinafomina/geekshop.git
+   40  cat /root/.ssh/id_rsa.pub
+   41  cd //
+   42  cat /root/.ssh/id_rsa.pub
+   43  git clone git@github.com:valentinafomina/geekshop.git
+   44  gh repo clone valentinafomina/geekshop
+   45  git@github.com:valentinafomina/geekshop.git
+   46  git clone git@github.com:valentinafomina/geekshop.git
+   47  ssh-add -l -E sha256
+   48  eval "$(ssh-agent -s)"
+   49  ssh-add -l -E sha256
+   50  ssh-keygen -t ed25519 -C "valentina.s.fomina@gmail.com"
+   51  ssh-add -l -E sha256
+   52  ssh-add -K ~/.ssh/id_ed25519
+   53  ssh-add ~/.ssh/id_ed25519
+   54  pbcopy < ~/.ssh/id_ed25519.pub
+   55  type ~/.ssh/id_ed25519.pub
+   56  less ~/.ssh/id_ed25519.pub
+   57  vi ~/.ssh/id_ed25519.pub
+   58  git clone git@github.com:valentinafomina/geekshop.git
+   59  ls -la
+   60  python3 -m venv env
+   61  source env/bin/activate
+   62  mc
+   63  cd geekshop/
+   64  mc
+   65  deactivate
+   66  python3 -m venv env
+   67  source env/bin/activate
+   68  pip3 install -r requirements.txt
+   69  git checkout
+   70  git checkout Lesson5
+   71  pip3 install -r requirements.txt
+   72  pip3 install gunicorn
+   73  psql -U postgres
+   74  python3 manage.py migrate
+   75  pip3 install psycorpg2
+   76  pip install psycorpg2
+   77  deactivate
+   78  pip3 install psycorpg2
+   79  pip install psycorpg2
+   80  apt install psycorpg2
+   81  source env/bin/activate
+   82  apt install psycorpg2
+   83  apt install psycorpg
+   84  apt install psycopg2
+   85  deactivate
+   86  apt install psycopg2
+   87  apt install psycopg
+   88  apt install psycopgapt install psycopg
+   89  apt install psycopg
+   90  apt-get install python3-psycopg2
+   91  source env/bin/activate
+   92  python3 manage.py migrate
+   93  apt-get install python3-psycopg2
+   94  python3 manage.py migrate
+   95  apt-get install python3-psycopg2
+   96  apt-get install psycopg2-binary
+   97  pip install psycopg2-binary
+   98  python3 manage.py migrate
+   99  python manage.py fill_db
+  100  cd geekshop
+  101  git pull
+  102  sourse env/bin/activate
+  103  source env/bin/activate
+  104  python3 manage.py migrate
+  105  python3 manage.py makemigrations
+  106  python3 manage.py migrate
+  107  python3 manage.py fill_db
+  108  cd geekshop
+  109  git pull
+  110  source env/bin/activate
+  111  python3 manage.py makemigrations
+  112  python3 manage.py makemigrations --merge
+  113  python3 manage.py migrate
+  114  python manage.py fill_db
+  115  python manage.py runserver
+  116  ifconfig
+  117  python manage.py runserver
+  118  git pull
+  119  python3 manage.py makemigrations
+  120  python3 manage.py migrate
+  121  git pull
+  122  python manage.py runserver
+  123  git histiry
+  124  git history
+  125  git commits
+  126  less geekshop
+  127  less geekshop/settings.py 
+  128  chown -R django /home/django/
+  129  chmod -R 755 /home/django/geekshop/
+  130  cd//
+  131  python3 manage.py runserver
+  132  sudo mc /etc/systemd/system/gunicorn.service
+  133  mcedit /etc/systemd/system/gunicorn.service
+  134  cd geekshop
+  135  source etc/bin/activate
+  136  source env/bin/activate
+  137  cd /home
+  138  ls
+  139  cd django
+  140  ls
+  141  //
+  142  cd..
+  143  cd//
+  144  cd/
+  145  cd geekshop
+  146  cd ../
+  147  cd ..//
+  148  cd geekshop
+  149  cd ..//
+  150  cd geekshop
+  151  ls
+  152  cd home
+  153  cd django
+  154  ls django
+  155  ls
+  156  cd //
+  157  ls root
+  158  cd root
+  159  ls geekshop
+  160  cd /home
+  161  cd django
+  162  cd geekshop
+  163  source env/bin/activate
+  164  mc
+  165  mcedit /etc/systemd/system/gunicorn.service
+  166  ls
+  167  systemctl enable gunicorn
+  168  systemctl start gunicorn
+  169  systemctl status gunicorn
+  170  chown -R django /home/django
+  171  systemctl enable gunicorn
+  172  systemctl start gunicorn
+  173  systemctl status gunicorn
+  174  mcedit /etc/nginx/sites-available/
+  175  mcedit /etc/nginx/sites-available/geekshop
+  176  ln -s /etc/nginx/sites-available/geekshop /etc/nginx/sites-enabled/
+  177  mc
+  178  nginx -t
+  179  systemctl restart nginx
+  180  ls
+  181  git checkout Lesson5
+  182  git pull
+  183  systemctl restart gunicorn
+  184  ls
+  185  history > /tmp/history.txt
