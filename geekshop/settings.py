@@ -53,7 +53,6 @@ INSTALLED_APPS = [
     'social_django',
     'debug_toolbar',
     'template_profiler_panel',
-
 ]
 
 MIDDLEWARE = [
