@@ -26,13 +26,13 @@ load_dotenv(BASE_DIR, '/.env')
 SECRET_KEY = 'xxac+ln+74ue7w1tj7%l3kw)9ygh893s6q$g)5ps4c#s!=19yk'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 
 # ALLOWED_HOSTS = ['127.0.0.1']
 ALLOWED_HOSTS = [
     '*',
-    # '194.67.109.45',
+    '194.67.109.45',
     # '127.0.0.1',
 ]
 
