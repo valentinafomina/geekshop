@@ -22,4 +22,11 @@ class Product(models.Model):
     
     def __str__(self):
         return "{} ({})".format(self.name, self.category.name)
+
+
+    @staticmethod
+    def get_items():
+        return Product.objects.filter(is_active=True).order_by('category', 'name')
+
+
         

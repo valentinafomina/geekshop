@@ -2,12 +2,13 @@ from django.db import transaction
 from django.db.models.signals import pre_save, pre_delete
 from django.dispatch import receiver
 from django.forms import inlineformset_factory
-from django.http import HttpResponseRedirect
+from django.http import HttpResponseRedirect, JsonResponse
 from django.shortcuts import render, get_object_or_404
 from django.urls import reverse_lazy, reverse
 from django.views.generic import ListView, CreateView, UpdateView, DeleteView, DetailView
 
 from basketapp.models import Basket
+from mainapp.models import Product
 from ordersapp.forms import OrderItemEditForm
 from ordersapp.models import Order, OrderItem
 
@@ -62,6 +63,9 @@ class OrderCreate(CreateView):
            self.object.delete()
 
        return super(OrderCreate, self).form_valid(form)
+
+
+
 
    #    def get_context_data(self, **kwargs):
    #     data = super().get_context_data(**kwargs)
@@ -189,6 +193,14 @@ def forming_complete(request, pk):
    order = get_object_or_404(Order, pk=pk)
    order.status = Order.SENT_TO_PROCEED
    order.save()
+
+def get_product_price(request, pk):
+   if request.is_ajax():
+       product = Product.objects.filter(pk=int(pk)).first()
+       if product:
+           return JsonResponse({'price': product.price})
+       else:
+           return JsonResponse({'price': 0})
 
 # @receiver(pre_save, sender=Basket)
 # @receiver(pre_save, sender=Order)
