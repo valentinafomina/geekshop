@@ -30,7 +30,11 @@ DEBUG = True
 
 
 # ALLOWED_HOSTS = ['127.0.0.1']
-ALLOWED_HOSTS = ['*', '194.67.109.45']
+ALLOWED_HOSTS = [
+    '*',
+    '194.67.109.45',
+    # '127.0.0.1',
+]
 
 
 # Application definition
@@ -50,7 +54,7 @@ INSTALLED_APPS = [
     'social_django',
     'debug_toolbar',
     'template_profiler_panel',
-
+    'django_extensions'
 ]
 
 MIDDLEWARE = [
@@ -144,9 +148,11 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
-STATICFILES_DIRS = (
-    os.path.join(BASE_DIR, "static"),
-)
+# STATICFILES_DIRS = (
+#     os.path.join(BASE_DIR, "static"),
+# )
+
+STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 MEDIA_URL = '/media/'
@@ -157,11 +163,13 @@ LOGIN_URL = '/auth/login/'
 
 # EMAIL_HOST = os.getenv('EMAIL_HOST')
 
-EMAIL_HOST = 'localhost'
-EMAIL_PORT = 25
-EMAIL_HOST_USER = 'django@gb.local'
-EMAIL_HOST_PASSWORD = 'geekbrains'
-EMAIL_USE_SSL = False
+EMAIL_HOST = 'smtp.mail.ru'
+EMAIL_PORT = 465
+EMAIL_HOST_USER = 'django.sendmail@mail.ru'
+EMAIL_HOST_PASSWORD = 'pHSM3Kv5lmauw5HW5Q5q'
+EMAIL_USE_SSL = True
+#EMAIL_USE_TLS = True
+
 
 EMAIL_BACKEND = 'django.core.mail.backends.filebased.EmailBackend'
 EMAIL_FILE_PATH = 'tmp/emails'
@@ -171,7 +179,7 @@ LOGIN_ERROR_URL = '/'
 SOCIAL_AUTH_VK_OAUTH2_IGNORE_DEFAULT_SCOPE = True
 SOCIAL_AUTH_VK_OAUTH2_SCOPE = ['email']
 
-DOMAIN_NAME = 'http://localhost:8000'
+DOMAIN_NAME = 'http://194.67.109.45'
 
 AUTHENTICATION_BACKENDS = (
     'django.contrib.auth.backends.ModelBackend',
@@ -219,4 +227,3 @@ if DEBUG:
        'debug_toolbar.panels.profiling.ProfilingPanel',
        'template_profiler_panel.panels.template.TemplateProfilerPanel',
    ]
-#STATIC_ROOT = os.path.join(BASE_DIR, 'static')
