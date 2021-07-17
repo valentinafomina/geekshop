@@ -16,7 +16,6 @@ def login(request):
     login_form = ShopUserLoginForm(data=request.POST or None)
     
     next = request.GET['next'] if 'next' in request.GET.keys() else ''
-    #print('next', next)
     
     if request.method == 'POST' and login_form.is_valid():
         username = request.POST['username']
@@ -26,7 +25,6 @@ def login(request):
         if user and user.is_active:
             auth.login(request, user)
             if 'next' in request.POST.keys():
-                #print('redirect next', request.POST['next'])
                 return HttpResponseRedirect(request.POST['next'])
             else:
                 return HttpResponseRedirect(reverse('main'))
@@ -90,7 +88,7 @@ def send_verify_link(user):
 
 def verify(request, email, key):
     user = ShopUser.objects.filter(email=email).first()
-    if user and user.activation_key == key and not user.is_activation_key_expired():
+    if user and user.activation_key == key: #and not user.is_activation_key_expired():
         user.is_active = True
         user.activation_key = ''
         user.activation_key_created = None
