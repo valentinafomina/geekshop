@@ -5,6 +5,33 @@ from basketapp.models import Basket
 
 from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
 
+from django.conf import settings
+from django.core.cache import cache
+
+from django.views.decorators.cache import cache_page
+
+def get_links_menu():
+   if settings.LOW_CACHE:
+       key = 'links_menu'
+       links_menu = cache.get(key)
+       if links_menu is None:
+           links_menu = ProductCategory.objects.filter(is_active=True)
+           cache.set(key, links_menu)
+       return links_menu
+   else:
+       return ProductCategory.objects.filter(is_active=True)
+
+def get_product(pk):
+    if settings.LOW_CACHE:
+        key = f'product_{pk}'
+        product = cache.get(key)
+        if product is None:
+            product = get_object_or_404(Product, pk=pk)
+            cache.set(key, product)
+        return product
+    else:
+        return get_object_or_404(Product, pk=pk)
+
 
 JSON_PATH = 'mainapp/json'
 
@@ -47,10 +74,10 @@ def main(request):
     
     return render(request, 'mainapp/index.html', content)
     
-
+@cache_page(3600)
 def products(request, pk=None, page=1):   
     title = 'продукты'
-    links_menu = ProductCategory.objects.filter(is_active=True)
+    # links_menu = ProductCategory.objects.filter(is_active=True)
     basket = get_basket(request.user)
            
     if pk:
@@ -74,7 +101,7 @@ def products(request, pk=None, page=1):
         
         content = {
             'title': title,
-            'links_menu': links_menu,
+            'links_menu': get_links_menu(),
             'category': category,
             'products': products_paginator,
             # 'basket': basket,
@@ -87,7 +114,7 @@ def products(request, pk=None, page=1):
     
     content = {
         'title': title,
-        'links_menu': links_menu, 
+        'links_menu': get_links_menu(),
         'hot_product': hot_product,
         'same_products': same_products,
         # 'basket': basket,
@@ -98,13 +125,14 @@ def products(request, pk=None, page=1):
     
 def product(request, pk):
     title = 'продукты'
-    links_menu = ProductCategory.objects.filter(is_active=True)
+    # links_menu = ProductCategory.objects.filter(is_active=True)
 
-    product = get_object_or_404(Product, pk=pk)
+    # product = get_object_or_404(Product, pk=pk)
+    product = get_product(pk)
     
     content = {
         'title': title, 
-        'links_menu': links_menu, 
+        'links_menu': get_links_menu(),
         'product': product, 
         # 'basket': get_basket(request.user),
     }
