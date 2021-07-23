@@ -2,6 +2,7 @@
 <project version="4">
   <component name="Encoding">
     <file url="file://$PROJECT_DIR$/.gitignore" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/adminapp/forms.py" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/authapp/apps.py" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/authapp/pipeline.py" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/authapp/tests.py" charset="UTF-8" />
@@ -13,6 +14,7 @@
     <file url="file://$PROJECT_DIR$/mainapp/json/categories.json" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/mainapp/json/contact__locations.json" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/mainapp/json/products.json" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/mainapp/management/commands/learn_db.py" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/mainapp/management/commands/users_fix.py" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/manage.py" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/migrate.bat" charset="UTF-8" />
